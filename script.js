@@ -34,6 +34,34 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
+
+    emailjs.init('G01Jv_ElJZPt8iCon'); 
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+     
+        const formData = new FormData(this);
+        const data = {
+            full_name: formData.get('full_name'),
+            email: formData.get('email'),
+            phone_number: formData.get('phone_number'),
+            subject: formData.get('subject'),
+            message: formData.get('message')
+        };
+    
+      
+        emailjs.send('service_m1wdwwe', 'template_z46tkil', data)
+            .then((response) => {
+                console.log('Success:', response);
+                alert('Email sent successfully!');
+                document.getElementById('contact-form').reset(); 
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Failed to send email.');
+            });
+    });
+    
 });
 
 
@@ -68,3 +96,10 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
+
+
+
+
+
+
+

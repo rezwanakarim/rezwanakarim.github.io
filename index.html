@@ -61,7 +61,7 @@
         </div>
         <div class="about-content">
             <h2>About <span>Me.</span></h2>
-            <p> I’m Rezwana Karim, and I love making digital experiences that are both beautiful and easy to use. I’m into everything from frontend development to UI/UX design, and I take pride in making sure everything works just right. For me, it’s all about turning ideas into something that people will enjoy interacting with.</p>
+            <p> Assalamu alaikum.</p><p> I’m Rezwana Karim, and I love making digital experiences that are both beautiful and easy to use. I’m into everything from frontend development to UI/UX design, and I take pride in making sure everything works just right. For me, it’s all about turning ideas into something that people will enjoy interacting with.</p>
             <a href="#" target="_blank" class="btn" download><i class='bx bx-cloud-download'></i>Resume</a>
             
         </div>
@@ -147,25 +147,26 @@
     
 
       <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
+        <h2 class="heading">Contact <span>Me.</span></h2>
 
-        <form action="">
+        <form id="contact-form">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email">
+                    <input type="text" name="full_name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="input-box">
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="number" name="phone_number" placeholder="Phone Number" >
+                    <input type="text" name="subject" placeholder="Subject" required>
                 </div>
             </div>
-
+        
             <div class="input-group-2">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
             </div>
         </form>
+        
 
       </section>
 
@@ -188,6 +189,11 @@
         </p>
     </footer>
     <script src="script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+
 </body>
 
 </html>
