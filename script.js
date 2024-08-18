@@ -64,6 +64,15 @@ document.addEventListener("DOMContentLoaded", function() {
     
 });
 
+function copyEmail() {
+    const emailText = document.getElementById("email").innerText;
+    navigator.clipboard.writeText(emailText).then(() => {
+        alert("Email copied to clipboard!");
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
+
 
 const menuIcon = document.querySelector('#menu-icon');
 const navbar = document.querySelector('.navbar');
@@ -96,6 +105,8 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
+
+
 
 
 
