@@ -743,26 +743,56 @@ span {
 
 
 
+@media(max-width:1450px) {
+    #menu-icon {
+        display: block;
+    }
 
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        border-top-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
 
+    .navbar.active {
+        display: block;
+    }
 
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+    }
 
+}
 
 @media(max-width:1285px) {
     html {
         font-size: 55%;
     }
+   
 
     /* .s */
 }
 
+
 @media(max-width:991px) {
+
     header {
         padding: 2rem 3%;
     }
 
     section {
-        padding: 10rem 3% 2rem;
+        padding: 10rem 3% ;
     }
 
     .timeline-items::before {
@@ -846,6 +876,16 @@ span {
 
     .home-img img {
         width: 56vw;
+    }
+
+    .about-img {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+    
+    .about-content {
+        margin-left: 3rem; 
     }
 
     /* .s  */
